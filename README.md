@@ -1,6 +1,6 @@
 ## Japanese Chatbot for Language Learners using [Rasa](https://rasa.com/)
 
-#### This is a simple chatbot built off of the RASA framework aimed to help beginner Japanese language learners practice keigo through a simulated conversation. 
+#### This is a simple chatbot aimed to help beginner Japanese language learners practice a basic conversation. This bot will ask the user about themselves and also prompt them to ask questions back.
 
 #### Installing Rasa: Follow these instructions to download [Rasa](https://rasa.com/) for:
 * [Windows](https://learning.rasa.com/installation/)
@@ -25,3 +25,4 @@ When the bot loads, type `こんにちは` to start the conversation!
 Type `/stop` to exit the bot in the shell.
 
 ![image](https://user-images.githubusercontent.com/76408777/203108052-0e62ac4b-940b-4fea-8912-a23af19e6367.png)
+
