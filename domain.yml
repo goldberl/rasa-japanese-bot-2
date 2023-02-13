@@ -8,10 +8,6 @@ intents:
 - inform_no
 - inform_email
 - inform_recipient
-- inform_jap_level
-- inform_education
-- inform_name
-- inform_hometown
 
 responses:
   utter_hello:
@@ -37,14 +33,6 @@ responses:
   - text: Please enter the email address of the person you want to email.
   utter_askifsendemail:
   - text: ありがとうございました！しつもんのおわりです。Do you want to send an email of the conversation log to anyone? Please type 'yes' or 'no' in English.
-  utter_jap_level:
-  - text: What is your Japanese level?
-  utter_ask_education:
-  - text: Where did you learn Japanese?
-  utter_ask_name_english:
-  - text: What is your name?
-  utter_ask_hometown:
-  - text: What is your hometown?
 
 entities:
 - name
@@ -81,10 +69,6 @@ actions:
 - utter_askifsendemail
 - log_conversation_bot
 - log_conversation_user
-- utter_jap_level
-- utter_ask_education
-- utter_ask_name_english
-- utter_ask_hometown
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
