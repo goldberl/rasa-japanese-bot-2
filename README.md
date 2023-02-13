@@ -1,7 +1,7 @@
 ## Japanese Chatbot for Language Learners using [Rasa](https://rasa.com/)
 
 #### This is a simple chatbot aimed to help beginner Japanese language learners practice a basic conversation. This bot will ask the user about themselves and also prompt them to ask questions back.
-#### Noah Comment to see if branch differences work testing testing one two three again
+
 #### Installing Rasa: Follow these instructions to download [Rasa](https://rasa.com/) for:
 * [Windows](https://learning.rasa.com/installation/)
 * [MacOS](https://learning.rasa.com/installation/mac/)

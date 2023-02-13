@@ -8,10 +8,25 @@ intents:
 - inform_no
 - inform_email
 - inform_recipient
+##################################################################################################
 - inform_jap_level
 - inform_education
 - inform_name
 - inform_hometown
+- inform_Japan_trip
+- inform_Japan_where
+- inform_Japan_activity
+- inform_residence
+##################################################################################################
+- ask_live
+- ask_occupation
+- ask_family
+- ask_kids
+- ask_America_activity
+- ask_America_reason
+- ask_America_where
+- ask_food
+#- ask_specific
 
 responses:
   utter_hello:
@@ -37,6 +52,7 @@ responses:
   - text: Please enter the email address of the person you want to email.
   utter_askifsendemail:
   - text: ありがとうございました！しつもんのおわりです。Do you want to send an email of the conversation log to anyone? Please type 'yes' or 'no' in English.
+##################################################################################################
   utter_jap_level:
   - text: What is your Japanese level?
   utter_ask_education:
@@ -45,6 +61,31 @@ responses:
   - text: What is your name?
   utter_ask_hometown:
   - text: What is your hometown?
+  utter_ask_been_Japan:
+  - text: Have you been to Japan?
+  utter_ask_destination_Japan:
+  - text: Where in Japan have you been?
+  utter_ask_activity_Japan:
+  - text: What did you do in Japan?
+  utter_ask_current_residence:
+  - text: Where do you currently live?
+##############################################################################################
+  utter_tell_live:
+  - text: I live in a computer.
+  utter_tell_occupation:
+  - text: I work as a chat bot.
+  utter_tell_family:
+  - text: I have a motherboard and a toaster for a father who live at NASA.
+  utter_tell_kids:
+  - text: I have three kids who are 7, 10, and 23.
+  utter_tell_activity_America:
+  - text: I went to see fireworks on the fourth of July.
+  utter_tell_why_America:
+  - text: America is cool!
+  utter_tell_where_America:
+  - text: I went to Tennessee.
+  utter_tell_food:
+  - text: I ate hot dogs and hamburgers.
 
 entities:
 - name
@@ -81,10 +122,25 @@ actions:
 - utter_askifsendemail
 - log_conversation_bot
 - log_conversation_user
+##################################################################################################
 - utter_jap_level
 - utter_ask_education
 - utter_ask_name_english
 - utter_ask_hometown
+- utter_ask_been_Japan
+- utter_ask_destination_Japan
+- utter_ask_activity_Japan
+- utter_ask_current_residence
+##################################################################################################
+- utter_tell_live
+- utter_tell_occupation
+- utter_tell_family
+- utter_tell_kids
+- utter_tell_activity_America
+- utter_tell_why_America
+- utter_tell_where_America
+- utter_tell_food
+#- utter_tell_specific
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

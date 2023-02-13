@@ -15,6 +15,14 @@ stories:
   - intent: inform_name
   - action: utter_ask_hometown
   - intent: inform_hometown
+  - action: utter_ask_been_Japan
+  - intent: inform_Japan_trip
+  - action: utter_ask_destination_Japan
+  - intent: inform_Japan_where
+  - action: utter_ask_activity_Japan
+  - intent: inform_Japan_activity
+  - action: utter_ask_current_residence
+  - intent: inform_residence
   - action: utter_thanks_for_talking
   - action: utter_goodbye
 
