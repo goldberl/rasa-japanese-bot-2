@@ -46,6 +46,8 @@ class ActionDefaultAskAffirmation(Action):
         elif "Please enter the email address of the person you want to email." in lastBotMessage:
             dispatcher.utter_message('The email address is ' + lastOutput)
             SlotSet("email", lastOutput)
+	elif lastBotMessage == "What is your Japanese level?":
+		dispatcher.utter.message("your Japanese level is" + lastOutput)
         # else
         else:
             dispatcher.utter_message(text="すみません、わかりません。 Sorry, I don't quite understand (,,>﹏<,,).", image = "https://media.tenor.com/-caxkmc867EAAAAC/mochi-cat.gif")
