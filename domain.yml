@@ -19,14 +19,7 @@ intents:
 - inform_Japan_activity
 - inform_residence
 ##################################################################################################
-- ask_live
-- ask_occupation
-- ask_family
-- ask_kids
-- ask_America_activity
-- ask_America_reason
-- ask_America_where
-- ask_food
+- question
 #- ask_specific
 
 responses:
@@ -72,21 +65,21 @@ responses:
   utter_ask_current_residence:
   - text: Where do you currently live?
 ##############################################################################################
-  utter_tell_live:
+  utter_question/ask_live:
   - text: I live in a computer.
-  utter_tell_occupation:
+  utter_question/ask_occupation:
   - text: I work as a chat bot.
-  utter_tell_family:
+  utter_question/ask_family:
   - text: I have a motherboard and a toaster for a father who live at NASA.
-  utter_tell_kids:
+  utter_question/ask_kids:
   - text: I have three kids who are 7, 10, and 23.
-  utter_tell_activity_America:
+  utter_question/ask_America_activity:
   - text: I went to see fireworks on the fourth of July.
-  utter_tell_why_America:
+  utter_question/ask_America_reason:
   - text: America is cool!
-  utter_tell_where_America:
+  utter_question/ask_America_where:
   - text: I went to Tennessee.
-  utter_tell_food:
+  utter_question/ask_food:
   - text: I ate hot dogs and hamburgers.
 
 entities:
@@ -134,14 +127,14 @@ actions:
 - utter_ask_activity_Japan
 - utter_ask_current_residence
 ##################################################################################################
-- utter_tell_live
-- utter_tell_occupation
-- utter_tell_family
-- utter_tell_kids
-- utter_tell_activity_America
-- utter_tell_why_America
-- utter_tell_where_America
-- utter_tell_food
+- utter_question/ask_live
+- utter_question/ask_occupation
+- utter_question/ask_family
+- utter_question/ask_kids
+- utter_question/ask_America_activity
+- utter_question/ask_America_reason
+- utter_question/ask_America_where
+- utter_question/ask_food
 #- utter_tell_specific
 
 session_config:

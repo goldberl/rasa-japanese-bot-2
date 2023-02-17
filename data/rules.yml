@@ -23,50 +23,10 @@ rules:
   - intent: inform_idk
   - action: action_default_ask_affirmation
 
-# User asks "Where do you live?"
-- rule: user asks where bot lives
+#User asks a question
+- rule: user asks a question
   steps:
-  - intent: ask_live
-  - action: utter_tell_live
+  - intent: question
+  - action: utter_question
+  - action: action_check_numQ
 
-# User asks "What's your occupation?"
-- rule: user asks what the bot does for a living
-  steps:
-  - intent: ask_occupation
-  - action: utter_tell_occupation
-
-# User asks "Where is your family?"
-- rule: user asks where bot's family lives
-  steps:
-  - intent: ask_family
-  - action: utter_tell_family
-
-# User asks "Do you have kids? How old are they?
-- rule: user asks if bot has kids
-  steps:
-  - intent: ask_kids
-  - action: utter_tell_kids
-
-# User asks "What did you do in America?
-- rule: user asks what bot did in America
-  steps:
-  - intent: ask_America_activity
-  - action: utter_tell_activity_America
-
-# User asks "Why choose America?
-- rule: user asks why bot wanted to go to America.
-  steps:
-  - intent: ask_America_reason
-  - action: utter_tell_why_America
-
-# User asks "Where did you go?
-- rule: user asks what place bot went
-  steps:
-  - intent: ask_America_where
-  - action: utter_tell_where_America
-
-# User asks "What did you eat?
-- rule: user asks what bot ate
-  steps:
-  - intent: ask_food
-  - action: utter_tell_food

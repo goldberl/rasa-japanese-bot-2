@@ -46,8 +46,8 @@ class ActionDefaultAskAffirmation(Action):
         elif "Please enter the email address of the person you want to email." in lastBotMessage:
             dispatcher.utter_message('The email address is ' + lastOutput)
             SlotSet("email", lastOutput)
-	elif lastBotMessage == "What is your Japanese level?":
-		dispatcher.utter.message("your Japanese level is" + lastOutput)
+	#elif "What is your Japanese level?" in lastBotMessage:
+	#    dispatcher.utter_message('your Japanese level is' + lastOutput)
         # else
         else:
             dispatcher.utter_message(text="すみません、わかりません。 Sorry, I don't quite understand (,,>﹏<,,).", image = "https://media.tenor.com/-caxkmc867EAAAAC/mochi-cat.gif")
@@ -295,6 +295,36 @@ class DeleteConversationTxt(Action):
         if os.path.exists(uniqueFile):
             os.remove(uniqueFile)
         return []
+
+class ActionCheckNumQuestions(Action):
+# 8 questions currently
+    def name(self) -> Text:
+        return "action_check_numQ"
+
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        print("\nNumQ from slot:　" + num_q)
+
+        if int(num_q) < 8:
+            with open('questionCounter.txt', 'w') as f:
+	        f.write(num_q+1)
+	    with open('questionCounter.txt', 'r') as f:
+	        num_q = f.read()
+            dispatcher.utter_message(text="You asked " + num_q + " questions")
+            print("NumQ after adding 1:　" + num_q)
+	    num_qTwo=int(num_q)
+
+        else:
+            print("User asked " + str(num_q))
+            dispatcher.utter_message(text="You asked 8 questions. Goodbye.")
+	    num_qTwo=int(num_q)
+	    with open('questionCounter.txt', 'w') as f:
+	        f.write(0)
+
+        # return[]
+        return[num_qTwo]
 
 # class ActionTest(Action):
 #
