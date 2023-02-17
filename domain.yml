@@ -8,6 +8,7 @@ intents:
 - inform_no
 - inform_email
 - inform_recipient
+
 ##################################################################################################
 - inform_jap_level
 - inform_education
@@ -52,6 +53,7 @@ responses:
   - text: Please enter the email address of the person you want to email.
   utter_askifsendemail:
   - text: ありがとうございました！しつもんのおわりです。Do you want to send an email of the conversation log to anyone? Please type 'yes' or 'no' in English.
+
 ##################################################################################################
   utter_jap_level:
   - text: What is your Japanese level?
@@ -141,6 +143,7 @@ actions:
 - utter_tell_where_America
 - utter_tell_food
 #- utter_tell_specific
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
