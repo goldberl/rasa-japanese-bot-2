@@ -25,6 +25,3 @@ When the bot loads, type `こんにちは` to start the conversation!
 Type `/stop` to exit the bot in the shell.
 
 ![image](https://user-images.githubusercontent.com/76408777/203108052-0e62ac4b-940b-4fea-8912-a23af19e6367.png)
-
-
-this is a test
