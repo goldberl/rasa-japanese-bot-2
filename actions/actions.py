@@ -303,28 +303,50 @@ class ActionCheckNumQuestions(Action):
 
     def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
-        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+	domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        print("\nNumQ from slot:　" + num_q)
+        #keeps a counter in a text file of how many questions were asked.
+        
+        
+        f = open('questionCounter.txt', "r")
+        num_q=f.read()
+        f.close()
 
-        if int(num_q) < 8:
-            with open('questionCounter.txt', 'w') as f:
-	        f.write(num_q+1)
-	    with open('questionCounter.txt', 'r') as f:
-	        num_q = f.read()
+        if int(num_q) < 7:
+            f = open('questionCounter.txt', "w")
+            nextWrite=int(num_q)+1
+            f.write(str(nextWrite))
+            f.close()
+            f = open('questionCounter.txt', "r")
+            num_q = f.read()
+            f.close()
             dispatcher.utter_message(text="You asked " + num_q + " questions")
             print("NumQ after adding 1:　" + num_q)
-	    num_qTwo=int(num_q)
+            num_qTwo=int(num_q)
 
         else:
             print("User asked " + str(num_q))
             dispatcher.utter_message(text="You asked 8 questions. Goodbye.")
-	    num_qTwo=int(num_q)
-	    with open('questionCounter.txt', 'w') as f:
-	        f.write(0)
+            num_qTwo=int(num_q)
+            f = open('questionCounter.txt', "w")
+            f.write("0")
+            f.close()
 
-        # return[]
-        return[num_qTwo]
+        # return[] we aren't really returning anything
+        
+
+class ActionMakeFile(Action):
+# this custom action makes it so that we initialize a file to write to for counting questions
+    def name(self) -> Text:
+        return "action_make_file"
+
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+	domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        f = open('questionCounter.txt', "w")
+        f.write("0")
+        f.close()
 
 # class ActionTest(Action):
 #

@@ -106,6 +106,8 @@ actions:
 - after_handle_did_not_understand_answer
 - action_email
 - action_delete_conversation_txt
+- action_check_numQ
+- action_make_file
 - utter_hello
 - utter_greet
 - utter_goodbye
