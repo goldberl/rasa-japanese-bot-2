@@ -85,13 +85,6 @@ responses:
 entities:
 - name
 - email
-- jap_level
-- education
-- hometown
-- Japan_trip
-- Japan_where
-- Japan_activity
-- residence
 
 slots:
   name:
