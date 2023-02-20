@@ -28,4 +28,4 @@ rules:
   steps:
   - intent: question
   - action: utter_question
-  - action: action_check_numQ
+#  - action: action_check_numQ

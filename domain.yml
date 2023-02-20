@@ -85,6 +85,13 @@ responses:
 entities:
 - name
 - email
+- jap_level
+- education
+- hometown
+- Japan_trip
+- Japan_where
+- Japan_activity
+- residence
 
 slots:
   name:
@@ -118,7 +125,7 @@ actions:
 - log_conversation_bot
 - log_conversation_user
 ##################################################################################################
-- utter_jap_level
+- utter_ask_jap_level
 - utter_ask_education
 - utter_ask_name_english
 - utter_ask_hometown

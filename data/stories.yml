@@ -23,7 +23,6 @@ stories:
   - intent: inform_Japan_activity
   - action: utter_ask_current_residence
   - intent: inform_residence
-  - intent: ask_bot_question
   - action: utter_thanks_for_talking
   - action: utter_goodbye
 

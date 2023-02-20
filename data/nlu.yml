@@ -130,9 +130,24 @@ nlu:
     - [Bob](recipient)
 - intent: inform_jap_level
   examples: |
-   - I just started
-   - I have taken japanese for three years
-   - I am a native speaker
+   - はい
+   - はい、少しだけ話せます。
+   - はい、すこしだけはなせます。
+   - あまり話せません。
+   - あまりはなせません。
+   - あまり話しません。
+   - あまりはなしません。
+   - そうなんですね。日本語を話せます。
+   - そうなんですね。にほんごではなせます。
+   - はい、日本語を話します。
+   - はい、にほんごをはなします。
+   - 日本語を三年間勉強しました。
+   - にほんごをさんねんかんべんきょうしました。
+   -  日本語のネイティブです。
+   -  日本語のネイティブでございます。
+   -  日本人です。
+   -  日本人でございます。
+
 - intent: inform_education
   examples: |
    - I went to Harvard
