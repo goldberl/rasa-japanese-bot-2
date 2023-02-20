@@ -7,7 +7,7 @@ stories:
   - intent: greet
   - action: utter_hello
   - action: utter_greet
-  - action: utter_jap_level
+  - action: utter_ask_jap_level
   - intent: inform_jap_level
   - action: utter_ask_education
   - intent: inform_education

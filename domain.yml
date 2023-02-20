@@ -9,6 +9,19 @@ intents:
 - inform_email
 - inform_recipient
 
+##################################################################################################
+- inform_jap_level
+- inform_education
+- inform_name
+- inform_hometown
+- inform_Japan_trip
+- inform_Japan_where
+- inform_Japan_activity
+- inform_residence
+##################################################################################################
+- question
+#- ask_specific
+
 responses:
   utter_hello:
   - text: こんにちは! 
@@ -33,6 +46,41 @@ responses:
   - text: Please enter the email address of the person you want to email.
   utter_askifsendemail:
   - text: ありがとうございました！しつもんのおわりです。Do you want to send an email of the conversation log to anyone? Please type 'yes' or 'no' in English.
+
+##################################################################################################
+  utter_ask_jap_level:
+  - text: あれ、日本語を話しますか？
+  utter_ask_education:
+  - text: どこで日本語を勉強なさいましたか？
+  utter_ask_name_english:
+  - text: すごいですね。お名前は？
+  utter_ask_hometown:
+  - text: ごしゅっしんはどちらですか？
+  utter_ask_been_Japan:
+  - text: 日本にいらっしゃったことがありますか？
+  utter_ask_destination_Japan:
+  - text: 日本のどこにいらっしゃいますか？
+  utter_ask_activity_Japan:
+  - text: 日本で何をなさいますか？
+  utter_ask_current_residence:
+  - text: どこに住んでいらっしゃいますか？
+##############################################################################################
+  utter_question/ask_live:
+  - text: 北海度からまいります。
+  utter_question/ask_occupation:
+  - text: 医者として働いております。
+  utter_question/ask_family:
+  - text: お母さんとお父さんは京都に住んでおります。兄は東京にいます。
+  utter_question/ask_kids:
+  - text: 子供が一人おります。むすめは21歳でございまず。
+  utter_question/ask_America_activity:
+  - text: 7月4日に花火に見にまいりました。
+  utter_question/ask_America_reason:
+  - text: ホワイトハウスを見たりアメリカの文化について習ったりしたいでございますから。
+  utter_question/ask_America_where:
+  - text: ワシントンDCとテネシーにまいりました。
+  utter_question/ask_food:
+  - text: ホットドッグとハンバーガーをいただきました。
 
 entities:
 - name
@@ -69,6 +117,26 @@ actions:
 - utter_askifsendemail
 - log_conversation_bot
 - log_conversation_user
+##################################################################################################
+- utter_jap_level
+- utter_ask_education
+- utter_ask_name_english
+- utter_ask_hometown
+- utter_ask_been_Japan
+- utter_ask_destination_Japan
+- utter_ask_activity_Japan
+- utter_ask_current_residence
+##################################################################################################
+- utter_question/ask_live
+- utter_question/ask_occupation
+- utter_question/ask_family
+- utter_question/ask_kids
+- utter_question/ask_America_activity
+- utter_question/ask_America_reason
+- utter_question/ask_America_where
+- utter_question/ask_food
+#- utter_tell_specific
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

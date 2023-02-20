@@ -22,3 +22,10 @@ rules:
   steps:
   - intent: inform_idk
   - action: action_default_ask_affirmation
+
+#User asks a question
+- rule: user asks a question
+  steps:
+  - intent: question
+  - action: utter_question
+  - action: action_check_numQ
