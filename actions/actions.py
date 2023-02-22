@@ -292,8 +292,11 @@ class DeleteConversationTxt(Action):
 
         # Delete contents of conversation.txt
         uniqueFile = "conversationLogs/conversation_" + tracker.sender_id + ".txt"
+        uniqueFileTwo = "conversationLogs/questionCounter_" + tracker.sender_id + ".txt"
         if os.path.exists(uniqueFile):
             os.remove(uniqueFile)
+        if os.path.exists(uniqueFileTwo):
+            os.remove(uniqueFileTwo)
         return []
 
 class ActionCheckNumQuestions(Action):
@@ -307,30 +310,30 @@ class ActionCheckNumQuestions(Action):
 
         #keeps a counter in a text file of how many questions were asked.
         
-        
-        f = open('questionCounter.txt', "r")
-        num_q=f.read()
-        f.close()
+        uniqueFile = "conversationLogs/questionCounter_" + tracker.sender_id + ".txt"
+        question_txt = open(uniqueFile, "r")
+        num_q=question_txt.read()
+        question_txt.close()
 
         if int(num_q) < 7:
-            f = open('questionCounter.txt', "w")
+            question_txt = open(uniqueFile, "w")
             nextWrite=int(num_q)+1
-            f.write(str(nextWrite))
-            f.close()
-            f = open('questionCounter.txt', "r")
-            num_q = f.read()
-            f.close()
+            question_txt.write(str(nextWrite))
+            question_txt.close()
+            question_txt = open(uniqueFile, "r")
+            num_q = question_txt.read()
+            question_txt.close()
             dispatcher.utter_message(text="You asked " + num_q + " questions")
             print("NumQ after adding 1:　" + num_q)
             num_qTwo=int(num_q)
 
         else:
             print("User asked " + str(num_q))
-            dispatcher.utter_message(text="You asked 8 questions. Goodbye.")
+            dispatcher.utter_message(text="You asked 8 questions. You're finished!")
             num_qTwo=int(num_q)
-            f = open('questionCounter.txt', "w")
-            f.write("0")
-            f.close()
+            question_txt = open(uniqueFile, "w")
+            question_txt.write("0")
+            question_txt.close()
 
         # return[] we aren't really returning anything
         
@@ -343,10 +346,12 @@ class ActionMakeFile(Action):
     def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
 	domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        f = open('questionCounter.txt', "w")
-        f.write("0")
-        f.close()
+	
+        uniqueFile = "conversationLogs/questionCounter_" + tracker.sender_id + ".txt"
+        #conversation_txt = open(uniqueFile,"r") Refrence code to help with formatting
+       	question_txt = open(uniqueFile, "w")
+        question_txt.write("0")
+        question_txt.close()
 
 # class ActionTest(Action):
 #

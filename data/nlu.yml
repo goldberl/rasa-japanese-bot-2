@@ -55,7 +55,7 @@ nlu:
     - [クリスチャン](name)です。
     - なまえは[メアリー](name)
     - 私の名前は[さやこ](name)です。
-    - [ジェニファー] (name)
+    - [ジェニファー](name)
     - [パーカー](name)
     - [目黒](name)です。
     - [アダム](name)
@@ -133,9 +133,24 @@ nlu:
    - I just started
    - I have taken japanese for three years
    - I am a native speaker
+   - I am a beginner
+   - I speak little Japanese
+   - I am fluent in Japanese
+   - I speak Japanese frequently
+   - This is my first year taking Japanese
+   - I have taken one year of Japanese
+   - I used to do more Japanese
+   - I take a Japanese course at school
 - intent: inform_education
   examples: |
    - I went to Harvard
+   - I am educated at Dickinson
+   - I got good at Japanese when I studied abroad
+   - My parents taught me Japanese
+   - I am a native speaker of Japanese
+   - I learned Japanese when I was very young
+   - I have a PHD in Japanese language studies.
+   - I passed the JLPT
    - I learned Japanese in Nagoya
    - I am taking Japanese at Dickinson
 - intent: inform_name
@@ -143,23 +158,49 @@ nlu:
    - My name is Noah
    - My name is Sarah
    - People call me Jose
+   - My name is Todd
+   - My name is Meguro Sensei
+   - People refer to me as Cody
+   - I am Nick
+   - You can call me Sophia
+   - Hello, I am Lia
+   - My given name is Stacy
 - intent: inform_hometown
   examples: |
    - I grew up in Mechanicsburg
    - I live in Philly
    - I was born in Tokyo
    - I am a native to Germany
+   - I grew up in Harrisburg
+   - I used to live in California
+   - I was raised in Paris
+   - I was born in Topeka
+   - My hometown is Reading
+   - I used to live in Jim Thorpe
 - intent: inform_Japan_trip
   examples: |
    - I went to Japan
    - I visited Japan
+   - I got the chance to visit Japan
+   - I stayed in Japan for two weeks
+   - I was immersed in the culture during my Japan trip
+   - I loves my time in Japan
+   - I was in Japan for three months.
+   - I visited Japan as part of the US Military.
    - I have never been to Japan
+   - My family and I visited Japan.
 - intent: inform_Japan_where
   examples: |
    - I went to Osaka.
    - I visited Hiroshima.
    - I saw Tokyo.
    - I traveled all around Japan.
+   - My friends and I went to Akita
+   - I visited Nanzan
+   - I toured Nagoya
+   - I got to visit Kyoto
+   - I was able to see Akihabara
+   - I visited the beaches of Japan.
 - intent: inform_Japan_activity
   examples: |
    - I ate takoyaki.
@@ -167,12 +208,29 @@ nlu:
    - I shopped in Tokyo.
    - I biked.
    - I visited many stores.
+   - I talked with the locals
+   - I worked while I was there
+   - I ate wagyu beef
+   - I ate sushi
+   - I went to mueseums
+   - I went out to eat
+   - I experienced the local culture
+   - I ate street food
+   - I went to festivals
 - intent: inform_residence
   examples: |
    - I currently live on Dickinson College's campus.
    - I live in Montana
    - I live in the woods
    - I reside on this plane.
+   - I live in Georgia
+   - I live in New York
+   - I live in Asia
+   - I live in Africa
+   - I live in Ethiopia
+   - Currently, I live in an apartment with my friends
+   - I live with my girlfriend
+   - I live with my family
 - intent: question/ask_live
   examples: |
    - where do you live?
