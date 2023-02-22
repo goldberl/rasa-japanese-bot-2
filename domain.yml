@@ -85,6 +85,10 @@ responses:
 entities:
 - name
 - email
+- education
+- hometown
+- japan_place
+- food
 
 slots:
   name:

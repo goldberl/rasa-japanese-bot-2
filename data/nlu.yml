@@ -143,90 +143,162 @@ nlu:
    - はい、にほんごをはなします。
    - 日本語を三年間勉強しました。
    - にほんごをさんねんかんべんきょうしました。
-   -  日本語のネイティブです。
-   -  日本語のネイティブでございます。
-   -  日本人です。
-   -  日本人でございます。
+   - 日本語のネイティブです。
+   - 日本語のネイティブでございます。
+   - 日本人です。
+   - 日本人でございます。
 
 - intent: inform_education
   examples: |
-   - I went to Harvard
-   - I learned Japanese in Nagoya
-   - I am taking Japanese at Dickinson
+   - [ハーバード大学](education)に行きます。
+   - [ハーバード大学](education)にいきます。
+   - [南山大学](education)で日本語を勉強しに行きます。
+   - [ハーバード大学](education)でにほんごをべんきょうしにいきます。
+   - [ハーバード大学](education)で勉強します。
+   - [ハーバード大学](education)でべんきょうします。
+   - [ディキンソン大学](education)に行きます。
+   - [ディキンソン大学](education)で日本語を勉強しに行きます。
+   - [ディキンソン大学](education)にいきます。
+   - [ディキンソン大学](education)で勉強します。
+   - [ディキンソン大学](education)でべんきょうします。
+   - [ハーバード大学](education)に参りました。
+   - [ハーバード大学](education)にまいります。
+   - [ハーバード大学](education)で日本語を勉強しております。
+
 - intent: inform_name
   examples: |
-   - My name is Noah
-   - My name is Sarah
-   - People call me Jose
+    - わたしは[リア](name)です。
+    - 私は[リア](name)ともうします。
+    - 私は[リア](name)と申します。
+    - [クリス](name)
+    - [たけし](name)でございます。
+    - [めぐろ](name)です。
+    - [ニーナ](name)
+    - [サラー](name)
+    - [クリスチャン](name)です。
+    - なまえは[メアリー](name)
+    - 私の名前は[さやこ](name)です。
+    - [ジェニファー] (name)
+    - [パーカー](name)
+    - [目黒](name)です。
+    - [アダム](name)
+    - [ベンジャミン](name)
+    - [キャリー](name)
+    - [ダニエル](name)
+    - [エレイン](name)
+    - [フェリクス](name)
+    - [グラント](name)
+    - [ヘンリー](name)
+    - [イザベル](name)
+    - [ジェイミー](name)
+    - [キム](name)
+    - [マリア](name)
+    - [ナオミ](name)
+    - [オリビア](name)
+    - [クィンズィ](name)
+    - [リック](name)
+    - [ステファニー](name)
+    - [ティム](name)
+    - [ベロニカ](name)
+    - [ウィリアム](name)
 - intent: inform_hometown
   examples: |
-   - I grew up in Mechanicsburg
-   - I live in Philly
-   - I was born in Tokyo
-   - I am a native to Germany
+   - [フィラデルフィア](hometown)から来ます。
+   - [東京](hometown)から参ります。
+   - [京都](hometown)からまいります。
+   - しゅっしんは[中国](hometown)です。
+   - しゅっしんは[アメリカ](hometown)でございます。
+   - [ニュージャージー](hometown)
+   - [フロリダ](hometown)
+   - [ペンシルベニア](hometown)
+   - [メリーランド](hometown)
+   - [ニューメキシコ](hometown)
+   - [インド](hometown)
+   - [カナダ](hometown)
+   - [かんこく](hometown)
+   - [ロシア](hometown)
 - intent: inform_Japan_trip
   examples: |
-   - I went to Japan
-   - I visited Japan
-   - I have never been to Japan
+   - あります。
+   - ありません。
+   - 日本に行ったことがあります。
+   - 日本に行ったことがありません。
 - intent: inform_Japan_where
   examples: |
-   - I went to Osaka.
-   - I visited Hiroshima.
-   - I saw Tokyo.
-   - I traveled all around Japan.
+   - [大坂](japan_place)に旅行しました。
+   - [おおさか](japan_place)に参りました。
+   - [北海道](japan_place)にりょこうしました。
+   - [ほっかいど](japan_place)にまいりました。
+   - [東京](japan_place)に行きました。
+   - [奈良](japan_place)に旅行いたしました。
+   - [なら](japan_place)にいきました。
 - intent: inform_Japan_activity
   examples: |
-   - I ate takoyaki.
-   - I hiked mount Fuji.
-   - I shopped in Tokyo.
-   - I biked.
-   - I visited many stores.
+   - とこやきを食べました。
+   - 富士山にのぼりました。
+   - 買い物しました。
+   - 買い物いたしました。
+   - コンビニに行きました。
+   - コンビニにまいりました。
 - intent: inform_residence
   examples: |
-   - I currently live on Dickinson College's campus.
-   - I live in Montana
-   - I live in the woods
-   - I reside on this plane.
+   - 今大学に住んでいます。
+   - 京都に住んでおります。
+   - アメリカにいます。
 - intent: question/ask_live
   examples: |
-   - where do you live?
-   - where is your place of residence?
-   - where are you situated?
+   - どこに住んでいますか。
+   - どこにすんでいらっしゃいますか。
+   - どちらに住んでいますか。
+   - どちらにすんでいらっしゃいますか。
 - intent: question/ask_occupation
   examples: |
-   - what do you do?
-   - what is your job?
-   - do you work?
-   - what is your occupation?
+   - 何をしていらっしゃいますか。
+   - お仕事は
+   - 何をしていますか。
+   - 仕事はなんですか。
 - intent: question/ask_family
   examples: |
-   - Where does your family live?
-   - where does your mom live?
-   - is your family from around here?
-   - does your family live in America?
+   - ご家族はどこに住んでいらっしゃいますか。
+   - 家族はどこに住んでいますか。
+   - 家族はどちらに住んでいますか。
+   - ご家族はどちらに住んでいらっしゃいますか。
 - intent: question/ask_kids
   examples: |
-   - Do you have kids? How old are they?
-   - Do you have any kids?
-   - Do you have children?
+   - お子さんがいますか。
+   - 子供がいますか。
+   - こどもがいますか。
+   - 子どもがいますか。
 - intent: question/ask_America_activity
   examples: |
-   - What did you do in America?
-   - Did you see any sights in America?
-   - Did you do anything fun on your trip?
+   - アメリカで何をなさいましたか。 
+   - アメリカで何をしましたか。
+   - 何をなさいましたか。 
+   - 何をしましたか。
 - intent: question/ask_America_reason
   examples: |
-   - Why did you go to America?
-   - why did you choose to go here?
-   - what about America made you want to come?
+   - どうしてアメリカにいらっしゃいましたか。 
+   - どうしてアメリカに行きましたか。
+   - どうしてアメリカに旅行なさいましたま。 
+   - どうしてアメリカに旅行しましたか。 
 - intent: question/ask_America_where
   examples: |
-   - Where in America did you go?
-   - Where did you visit?
-   - Which state were you in?
+   - アメリカのどこにいらっしゃいましたか。 
+   - アメリカでどこにいらっしゃいましたか。
+   - アメリカでどこに行きましたか。
+   - どちらにいらっしゃいましたか。 
+   - どちらに行きましたか。 
+   - アメリカでどちらに旅行なさいましたま。 
+   - アメリカでどこ旅行しましたか。 
 - intent: question/ask_food
   examples: |
-   - What did you eat?
-   - did you eat anything good?
-   - did you try any classic American food? 
+   - [すし](food)をめしあがりましたか。
+   - [ハンバーガー](food)を召し上がりましたか。
+   - [ステーキ](food)を食べましたか。
+   - [コーヒー](food)を飲みましたか。
+   - [やさい](food)をめしあがりましたか。
+   - [にく](food)を召し上がりましたか。
+   - [さかな](food)を食べましたか。
+   - [みず](food)を飲みましたか。
+   - 何かをめしあがりましたか。
+   - おいしいものをめしあがりましたか。
