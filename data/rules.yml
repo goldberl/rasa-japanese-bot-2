@@ -28,4 +28,52 @@ rules:
   steps:
   - intent: question
   - action: utter_question
-#  - action: action_check_numQ
+  - action: action_check_numQ
+
+# Conversation part 1
+- rule: part 1
+  steps:
+  - intent: inform_jap_level
+  - action: utter_ask_education
+
+# Conversation part 2
+- rule: part 2
+  steps:
+  - intent: inform_education
+  - action: utter_ask_name_english
+
+# Conversation part 3
+- rule: part 3
+  steps:
+  - intent: inform_name
+  - action: utter_ask_hometown
+
+# Conversation part 4
+- rule: part 4
+  steps:
+  - intent: inform_hometown
+  - action: utter_ask_been_Japan
+
+# Conversation part 5
+- rule: part 5
+  steps:
+  - intent: inform_Japan_trip
+  - action: utter_ask_destination_Japan
+
+# Conversation part 6
+- rule: part 6
+  steps:
+  - intent: inform_Japan_where
+  - action: utter_ask_activity_Japan
+
+# Conversation part 7
+- rule: part 7
+  steps:
+  - intent: inform_Japan_activity
+  - action: utter_ask_current_residence
+
+# Conversation part 8
+- rule: part 8
+  steps:
+  - intent: inform_residence
+  - action: utter_askme

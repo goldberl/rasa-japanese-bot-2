@@ -46,7 +46,6 @@ class ActionDefaultAskAffirmation(Action):
         elif "Please enter the email address of the person you want to email." in lastBotMessage:
             dispatcher.utter_message('The email address is ' + lastOutput)
             SlotSet("email", lastOutput)
-        # else
         else:
             dispatcher.utter_message(text="すみません、わかりません。 Sorry, I don't quite understand (,,>﹏<,,).", image = "https://media.tenor.com/-caxkmc867EAAAAC/mochi-cat.gif")
 
@@ -290,9 +289,66 @@ class DeleteConversationTxt(Action):
 
         # Delete contents of conversation.txt
         uniqueFile = "conversationLogs/conversation_" + tracker.sender_id + ".txt"
+        uniqueFileTwo = "conversationLogs/questionCounter_" + tracker.sender_id + ".txt"
         if os.path.exists(uniqueFile):
             os.remove(uniqueFile)
+        if os.path.exists(uniqueFileTwo):
+            os.remove(uniqueFileTwo)
         return []
+
+class ActionCheckNumQuestions(Action):
+# 8 questions currently
+    def name(self) -> Text:
+        return "action_check_numQ"
+
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+	domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        #keeps a counter in a text file of how many questions were asked.
+        
+        uniqueFile = "conversationLogs/questionCounter_" + tracker.sender_id + ".txt"
+        question_txt = open(uniqueFile, "r")
+        num_q=question_txt.read()
+        question_txt.close()
+
+        if int(num_q) < 7:
+            question_txt = open(uniqueFile, "w")
+            nextWrite=int(num_q)+1
+            question_txt.write(str(nextWrite))
+            question_txt.close()
+            question_txt = open(uniqueFile, "r")
+            num_q = question_txt.read()
+            question_txt.close()
+            dispatcher.utter_message(text="You asked " + num_q + " questions")
+            print("NumQ after adding 1:　" + num_q)
+            num_qTwo=int(num_q)
+
+        else:
+            print("User asked " + str(num_q))
+            dispatcher.utter_message(text="You asked 8 questions. You're finished!")
+            num_qTwo=int(num_q)
+            question_txt = open(uniqueFile, "w")
+            question_txt.write("0")
+            question_txt.close()
+
+        # return[] we aren't really returning anything
+        
+
+class ActionMakeFile(Action):
+# this custom action makes it so that we initialize a file to write to for counting questions
+    def name(self) -> Text:
+        return "action_make_file"
+
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+	domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+	
+        uniqueFile = "conversationLogs/questionCounter_" + tracker.sender_id + ".txt"
+        #conversation_txt = open(uniqueFile,"r") Refrence code to help with formatting
+       	question_txt = open(uniqueFile, "w")
+        question_txt.write("0")
+        question_txt.close()
 
 # class ActionTest(Action):
 #

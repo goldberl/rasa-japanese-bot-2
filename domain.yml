@@ -64,6 +64,8 @@ responses:
   - text: 日本で何をなさいますか？
   utter_ask_current_residence:
   - text: どこに住んでいらっしゃいますか？
+  utter_askme:
+  - text: 私にしつもんを聞いてください。Please ask the questions that are listed on the webpage and try to use keigo.
 ##############################################################################################
   utter_question/ask_live:
   - text: 北海度からまいります。
@@ -121,6 +123,8 @@ actions:
 - utter_askifsendemail
 - log_conversation_bot
 - log_conversation_user
+- action_check_numQ
+- action_make_file
 ##################################################################################################
 - utter_ask_jap_level
 - utter_ask_education
