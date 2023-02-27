@@ -21,37 +21,57 @@ import os
 # Runs if bot does not understand user's input
 class ActionDefaultAskAffirmation(Action):
 
-    def name(self):
-        return "action_default_ask_affirmation"
+   def name(self):
+       return "action_default_ask_affirmation"
 
-    async def run(self, dispatcher, tracker, domain):
-        print("in ActionDefaultAskAffirmation!!!")
+   async def run(self, dispatcher, tracker, domain):
+       print("in ActionDefaultAskAffirmation!!!")
 	
-	# Last thing user typed
-        lastOutput = tracker.latest_message['text']
-        # Gets the user's last intent by extracting it from tracker dict
-        lastUserIntentDictionary = tracker.latest_message['intent']
-        lastUserIntent = list(lastUserIntentDictionary.values())[0]
+       # Last thing user typed
+       lastOutput = tracker.latest_message['text']
+       # Gets the user's last intent by extracting it from tracker dict
+       # lastUserIntentDictionary = tracker.latest_message['intent']
+       
+       #lastUserIntent = list(lastUserIntentDictionary.values())[1]
+       #print("Last USER intent: " + lastUserIntent)
+       #lastBotQuestion = tracker.latest_action_name
+       #print(lastBotQuestion)
         
-	# Gets last output of bot (last question that bot asked user)
-        for event in tracker.events:
-            if (event.get("event") == "bot"):
-                lastBotMessage = event.get("text")
-        print(lastBotMessage)
-
-        # Fallback for if the bot doesn't understand the receipient's name for the email or the email address
-        if "Please type the name of the person you want to email." in lastBotMessage:
-            dispatcher.utter_message('The person you want to email is ' + lastOutput)
-            SlotSet("recipient", lastOutput)
-        elif "Please enter the email address of the person you want to email." in lastBotMessage:
-            dispatcher.utter_message('The email address is ' + lastOutput)
-            SlotSet("email", lastOutput)
-        else:
-            dispatcher.utter_message(text="すみません、わかりません。 Sorry, I don't quite understand (,,>﹏<,,).", image = "https://media.tenor.com/-caxkmc867EAAAAC/mochi-cat.gif")
-
-        print(lastUserIntent)
-        
-        return [FollowupAction("after_handle_did_not_understand_answer")]	
+       # Gets last output of bot (last question that bot asked user)
+       for event in tracker.events:
+           if (event.get("event") == "bot"):
+               lastBotMessage = event.get("text")
+       print(lastBotMessage)
+       
+       # triggers different rules based on last bot question
+       if lastBotMessage == "あれ、日本語を話しますか？":
+           return [FollowupAction("activate_p1")]
+       elif lastBotMessage == "どこで日本語を勉強なさいましたか？":
+           return [FollowupAction("activate_p2")]
+       elif lastBotMessage == "すごいですね。お名前は？":
+           return [FollowupAction("activate_p3")]
+       elif lastBotMessage == "ごしゅっしんはどちらですか？":
+           return [FollowupAction("activate_p4")]
+       elif lastBotMessage == "日本にいらっしゃったことがありますか？":
+           return [FollowupAction("activate_p5")]
+       elif lastBotMessage == "日本のどこにいらっしゃいますか？":
+           return [FollowupAction("activate_p6")]
+       elif lastBotMessage == "日本で何をなさいますか？":
+           return [FollowupAction("activate_p7")]   
+       elif lastBotMessage == "どこに住んでいらっしゃいますか？":
+           return [FollowupAction("activate_p8")]        
+       # Fallback for if the bot doesn't understand the receipient's name for the email or the email address
+       elif "Please type the name of the person you want to email." in lastBotMessage:
+           dispatcher.utter_message('The person you want to email is ' + lastOutput)
+           SlotSet("recipient", lastOutput)
+           return [FollowupAction("after_handle_did_not_understand_answer")]
+       elif "Please enter the email address of the person you want to email." in lastBotMessage:
+           dispatcher.utter_message('The email address is ' + lastOutput)
+           SlotSet("email", lastOutput)
+           return [FollowupAction("after_handle_did_not_understand_answer")]
+       else:
+           dispatcher.utter_message(text="すみません、わかりません。 Sorry, I don't quite understand (,,>﹏<,,).", image = "https://media.tenor.com/-caxkmc867EAAAAC/mochi-cat.gif")
+           return [FollowupAction("after_handle_did_not_understand_answer")]
 
 # Followup action from ActionDefaultAskAffirmation that
 # generates the bot's next response        
@@ -349,6 +369,79 @@ class ActionMakeFile(Action):
        	question_txt = open(uniqueFile, "w")
         question_txt.write("0")
         question_txt.close()
+
+class ActionActivatePart1(Action):
+    def name(self) -> Text:
+        return "activate_p1"
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        print("Activating part 1 of the conversation")
+        return[]
+
+class ActionActivatePart2(Action):
+    def name(self) -> Text:
+        return "activate_p2"
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        print("Activating part 2 of the conversation")
+        return[]
+
+class ActionActivatePart3(Action):
+    def name(self) -> Text:
+        return "activate_p3"
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        print("Activating part 3 of the conversation")
+        return[]
+
+
+class ActionActivatePart4(Action):
+    def name(self) -> Text:
+        return "activate_p4"
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        print("Activating part 4 of the conversation")
+        return[]
+
+class ActionActivatePart5(Action):
+    def name(self) -> Text:
+        return "activate_p5"
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        print("Activating part 5 of the conversation")
+        return[]
+
+class ActionActivatePart6(Action):
+    def name(self) -> Text:
+        return "activate_p6"
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        print("Activating part 6 of the conversation")
+        return[]
+
+class ActionActivatePart7(Action):
+    def name(self) -> Text:
+        return "activate_p7"
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        print("Activating part 7 of the conversation")
+        return[]
+
+class ActionActivatePart8(Action):
+    def name(self) -> Text:
+        return "activate_p8"
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        print("Activating part 8 of the conversation")
+        return[]
 
 # class ActionTest(Action):
 #

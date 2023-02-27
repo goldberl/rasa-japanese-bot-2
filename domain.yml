@@ -125,6 +125,14 @@ actions:
 - log_conversation_user
 - action_check_numQ
 - action_make_file
+- activate_p1
+- activate_p2
+- activate_p3
+- activate_p4
+- activate_p5
+- activate_p6
+- activate_p7
+- activate_p8
 ##################################################################################################
 - utter_ask_jap_level
 - utter_ask_education
