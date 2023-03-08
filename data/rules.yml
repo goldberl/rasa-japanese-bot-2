@@ -58,24 +58,24 @@ rules:
 - rule: part 5A
   steps:
   - intent: inform_Japan_trip
-  - action: utter_ask_destination_Japan
+  - action: utter_ask_preference
 
 # Conversation part 6 (high confidence)
 - rule: part 6A
   steps:
-  - intent: inform_Japan_where
-  - action: utter_ask_activity_Japan
+  - intent: inform_Japan_preference
+  - action: utter_ask_food
 
 # Conversation part 7 (high confidence)
 - rule: part 7A
   steps:
-  - intent: inform_Japan_activity
-  - action: utter_ask_current_residence
+  - intent: inform_Japan_food
+  - action: utter_ask_onsen
 
 # Conversation part 8 (high confidence)
 - rule: part 8A
   steps:
-  - intent: inform_residence
+  - intent: inform_onsen
   - action: utter_askme
 
 # Conversation part 1 (low confidence)
@@ -106,19 +106,19 @@ rules:
 - rule: part 5B
   steps:
   - action: activate_p5
-  - action: utter_ask_destination_Japan
+  - action: utter_ask_preference
 
 # Conversation part 6 (low confidence)
 - rule: part 6
   steps:
   - action: activate_p6
-  - action: utter_ask_activity_Japan
+  - action: utter_ask_food
 
 # Conversation part 7 (low confidence)
 - rule: part 7B
   steps:
   - action: activate_p7
-  - action: utter_ask_current_residence
+  - action: utter_ask_onsen
 
 # Conversation part 8 (low confidence)
 - rule: part 8B

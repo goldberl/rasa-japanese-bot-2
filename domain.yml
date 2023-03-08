@@ -15,9 +15,9 @@ intents:
 - inform_name
 - inform_hometown
 - inform_Japan_trip
-- inform_Japan_where
-- inform_Japan_activity
-- inform_residence
+- inform_preference
+- inform_food
+- inform_onsen
 ##################################################################################################
 - question
 #- ask_specific
@@ -58,12 +58,12 @@ responses:
   - text: ごしゅっしんはどちらですか？
   utter_ask_been_Japan:
   - text: 日本にいらっしゃったことがありますか？
-  utter_ask_destination_Japan:
-  - text: 日本のどこにいらっしゃいますか？
-  utter_ask_activity_Japan:
-  - text: 日本で何をなさいますか？
-  utter_ask_current_residence:
-  - text: どこに住んでいらっしゃいますか？
+  utter_ask_preference:
+  - text: 日本のスポーツとかぶきと、どちらのほうがおごらんになりたいですか。
+  utter_ask_food:
+  - text: どんな日本の料理がお好きですか？
+  utter_ask_onsen:
+  - text: 日本のおんせんをどう思いまか？
   utter_askme:
   - text: 私にしつもんを聞いてください。Please ask the questions that are listed on the webpage and try to use keigo.
 ##############################################################################################
