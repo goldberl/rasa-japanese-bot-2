@@ -63,13 +63,13 @@ rules:
 # Conversation part 6 (high confidence)
 - rule: part 6A
   steps:
-  - intent: inform_Japan_preference
+  - intent: inform_preference
   - action: utter_ask_food
 
 # Conversation part 7 (high confidence)
 - rule: part 7A
   steps:
-  - intent: inform_Japan_food
+  - intent: inform_food
   - action: utter_ask_onsen
 
 # Conversation part 8 (high confidence)

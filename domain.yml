@@ -61,7 +61,7 @@ responses:
   utter_ask_preference:
   - text: 日本のスポーツとかぶきと、どちらのほうがおごらんになりたいですか。
   utter_ask_food:
-  - text: どんな日本の料理がお好きですか？
+  - text: どんな日本の料理を召し上がりたいですか？
   utter_ask_onsen:
   - text: 日本のおんせんをどう思いまか？
   utter_askme:
@@ -139,9 +139,9 @@ actions:
 - utter_ask_name_english
 - utter_ask_hometown
 - utter_ask_been_Japan
-- utter_ask_destination_Japan
-- utter_ask_activity_Japan
-- utter_ask_current_residence
+- utter_ask_preference
+- utter_ask_food
+- utter_ask_onsen
 ##################################################################################################
 - utter_question/ask_live
 - utter_question/ask_occupation
