@@ -10,20 +10,28 @@ stories:
   - action: action_make_file #This line allows the question counter to work.
   - action: utter_ask_jap_level
   - intent: inform_jap_level
+  - action: utter_respond_jap_level
   - action: utter_ask_education
   - intent: inform_education
+  - action: utter_respond_education
   - action: utter_ask_name_english
   - intent: inform_name
+  - action: utter_respond_name_english
   - action: utter_ask_hometown
   - intent: inform_hometown
+  - action: utter_respond_hometown
   - action: utter_ask_been_Japan
   - intent: inform_Japan_trip
+  - action: utter_respond_been_Japan
   - action: utter_ask_preference
   - intent: inform_preference
+  - action: utter_respond_preference
   - action: utter_ask_food
   - intent: inform_food
+  - action: utter_respond_food
   - action: utter_ask_onsen
   - intent: inform_onsen
+  - action: utter_respond_onsen
   - action: utter_askme
 #  - action: utter_thanks_for_talking
 #  - action: utter_goodbye

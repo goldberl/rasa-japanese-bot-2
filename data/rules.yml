@@ -34,48 +34,56 @@ rules:
 - rule: part 1A
   steps:
   - intent: inform_jap_level
+  - action: utter_respond_jap_level
   - action: utter_ask_education
 
 # Conversation part 2 (high confidence)
 - rule: part 2A
   steps:
   - intent: inform_education
+  - action: utter_respond_education
   - action: utter_ask_name_english
 
 # Conversation part 3 (high confidence)
 - rule: part 3A
   steps:
   - intent: inform_name
+  - action: utter_respond_name_english
   - action: utter_ask_hometown
 
 # Conversation part 4 (high confidence)
 - rule: part 4A
   steps:
   - intent: inform_hometown
+  - action: utter_respond_hometown
   - action: utter_ask_been_Japan
 
 # Conversation part 5 (high confidence)
 - rule: part 5A
   steps:
   - intent: inform_Japan_trip
+  - action: utter_respond_been_Japan
   - action: utter_ask_preference
 
 # Conversation part 6 (high confidence)
 - rule: part 6A
   steps:
   - intent: inform_preference
+  - action: utter_respond_preference
   - action: utter_ask_food
 
 # Conversation part 7 (high confidence)
 - rule: part 7A
   steps:
   - intent: inform_food
+  - action: utter_respond_food
   - action: utter_ask_onsen
 
 # Conversation part 8 (high confidence)
 - rule: part 8A
   steps:
   - intent: inform_onsen
+  - action: utter_respond_onsen
   - action: utter_askme
 
 # Conversation part 1 (low confidence)

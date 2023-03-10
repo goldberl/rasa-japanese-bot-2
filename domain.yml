@@ -67,6 +67,23 @@ responses:
   utter_askme:
   - text: 私にしつもんを聞いてください。Please ask the questions that are listed on the webpage and try to use keigo.
 ##############################################################################################
+  utter_respond_jap_level:
+  - text: いいね。日本語がむずかしですよ。時に外国人にとって、日本語の文法と漢字はかんたんではありません。しかし、日本語をれんしゅうしたら、上手になりますよ！
+  utter_respond_education:
+  - text: おもしろい、{education}で勉強しましたね。日本語の勉強をがんばりましょう！
+  utter_respond_name_english:
+  - text: おなまえは{name}さんですか？はじめまして。ラサともうします。
+  utter_respond_hometown:
+  - text: そうなんですか。{hometown}からいらっしゃいますね。いつか{hometown}に旅行したいと思います。
+  utter_respond_been_Japan:
+  - text: 富士山に行ったりおいしい料理を食べたりできるので、日本はすごいですね。
+  utter_respond_preference:
+  - text: わかりました。{preference}のほうがお好きですか。私はスポーツのほが好きです。日本で「やきゅう」はとても人気があります。
+  utter_respond_food:
+  - text: 私も{food}をいただきたいと思います。東京においしい{food}がありますね。
+  utter_respond_onsen:
+  - text: そうなんでか。おんせんでリラックスできるので、好きです。
+##############################################################################################
   utter_question/ask_live:
   - text: 北海度からまいります。
   utter_question/ask_occupation:
@@ -89,7 +106,7 @@ entities:
 - email
 - education
 - hometown
-- japan_place
+- preference
 - food
 
 slots:
@@ -100,6 +117,34 @@ slots:
     mappings:
     - type: from_entity
       entity: name
+  education:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: education
+  hometown:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: hometown
+  preference:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: preference
+  food:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: food
   email:
     type: text
     influence_conversation: true
@@ -142,6 +187,15 @@ actions:
 - utter_ask_preference
 - utter_ask_food
 - utter_ask_onsen
+##################################################################################################
+- utter_respond_jap_level
+- utter_respond_education
+- utter_respond_name_english
+- utter_respond_hometown
+- utter_respond_been_Japan
+- utter_respond_preference
+- utter_respond_food
+- utter_respond_onsen
 ##################################################################################################
 - utter_question/ask_live
 - utter_question/ask_occupation
