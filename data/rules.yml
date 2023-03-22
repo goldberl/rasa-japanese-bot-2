@@ -27,109 +27,149 @@ rules:
 - rule: user asks a question
   steps:
   - intent: question
+  - action: log_conversation_user
   - action: utter_question
+  - action: log_conversation_bot
   - action: action_check_numQ
 
 # Conversation part 1 (high confidence)
 - rule: part 1A
   steps:
   - intent: inform_jap_level
+  - action: log_conversation_user
   - action: utter_respond_jap_level
+  - action: log_conversation_bot
   - action: utter_ask_education
+  - action: log_conversation_bot
 
 # Conversation part 2 (high confidence)
 - rule: part 2A
   steps:
   - intent: inform_education
+  - action: log_conversation_user
   - action: utter_respond_education
+  - action: log_conversation_bot
   - action: utter_ask_name_english
+  - action: log_conversation_bot
 
 # Conversation part 3 (high confidence)
 - rule: part 3A
   steps:
   - intent: inform_name
+  - action: log_conversation_user
   - action: utter_respond_name_english
+  - action: log_conversation_bot
   - action: utter_ask_hometown
+  - action: log_conversation_bot
 
 # Conversation part 4 (high confidence)
 - rule: part 4A
   steps:
   - intent: inform_hometown
+  - action: log_conversation_user
   - action: utter_respond_hometown
+  - action: log_conversation_bot
   - action: utter_ask_been_Japan
+  - action: log_conversation_bot
 
 # Conversation part 5 (high confidence)
 - rule: part 5A
   steps:
   - intent: inform_Japan_trip
+  - action: log_conversation_user
   - action: utter_respond_been_Japan
+  - action: log_conversation_bot
   - action: utter_ask_preference
+  - action: log_conversation_bot
 
 # Conversation part 6 (high confidence)
 - rule: part 6A
   steps:
   - intent: inform_preference
+  - action: log_conversation_user
   - action: utter_respond_preference
+  - action: log_conversation_bot
   - action: utter_ask_food
+  - action: log_conversation_bot
 
 # Conversation part 7 (high confidence)
 - rule: part 7A
   steps:
   - intent: inform_food
+  - action: log_conversation_user
   - action: utter_respond_food
+  - action: log_conversation_bot
   - action: utter_ask_onsen
+  - action: log_conversation_bot
 
 # Conversation part 8 (high confidence)
 - rule: part 8A
   steps:
   - intent: inform_onsen
+  - action: log_conversation_user
   - action: utter_respond_onsen
+  - action: log_conversation_bot
   - action: utter_askme
+  - action: log_conversation_bot
 
 # Conversation part 1 (low confidence)
 - rule: part 1B
   steps:
   - action: activate_p1
   - action: utter_ask_education
+  - action: log_conversation_bot
 
 # Conversation part 2 (low confidence)
 - rule: part 2B
   steps:
   - action: activate_p2
   - action: utter_ask_name_english
+  - action: log_conversation_bot
 
 # Conversation part 3 (low confidence)
 - rule: part 3B
   steps:
   - action: activate_p3
   - action: utter_ask_hometown
+  - action: log_conversation_bot
 
 # Conversation part 4 (low confidence)
 - rule: part 4B
   steps:
   - action: activate_p4
   - action: utter_ask_been_Japan
+  - action: log_conversation_bot
 
 # Conversation part 5 (low confidence)
 - rule: part 5B
   steps:
   - action: activate_p5
   - action: utter_ask_preference
+  - action: log_conversation_bot
 
 # Conversation part 6 (low confidence)
 - rule: part 6
   steps:
   - action: activate_p6
   - action: utter_ask_food
+  - action: log_conversation_bot
 
 # Conversation part 7 (low confidence)
 - rule: part 7B
   steps:
   - action: activate_p7
   - action: utter_ask_onsen
+  - action: log_conversation_bot
 
 # Conversation part 8 (low confidence)
 - rule: part 8B
   steps:
   - action: activate_p8
   - action: utter_askme
+  - action: log_conversation_bot
+
+# Ask about email
+# - rule: ask about email (start email stories)
+#  steps:
+#  - intent: inform_yes
+#  - action: utter_askifsendemail

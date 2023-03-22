@@ -45,7 +45,7 @@ responses:
   utter_askemail:
   - text: Please enter the email address of the person you want to email.
   utter_askifsendemail:
-  - text: ありがとうございました！しつもんのおわりです。Do you want to send an email of the conversation log to anyone? Please type 'yes' or 'no' in English.
+  - text: Do you want to send an email of the conversation log to anyone? Please type 'yes' or 'no' in English.
 
 ##################################################################################################
   utter_ask_jap_level:
@@ -61,7 +61,7 @@ responses:
   utter_ask_preference:
   - text: 日本のスポーツとかぶきと、どちらのほうがおごらんになりたいですか。
   utter_ask_food:
-  - text: どんな日本の料理を召し上がりたいですか？
+  - text: どんな日本の料理をめしあがりたいですか？
   utter_ask_onsen:
   - text: 日本のおんせんをどう思いまか？
   utter_askme:
@@ -166,8 +166,10 @@ actions:
 - utter_askemail
 - utter_askrecipient
 - utter_askifsendemail
+- action_dummy
 - log_conversation_bot
 - log_conversation_user
+- collect_email_info
 - action_check_numQ
 - action_make_file
 - activate_p1

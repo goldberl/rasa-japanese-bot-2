@@ -347,12 +347,13 @@ class ActionCheckNumQuestions(Action):
         else:
             print("User asked " + str(num_q))
             dispatcher.utter_message(text="You asked 8 questions. You're finished!")
+            dispatcher.utter_message(text="Send an email?")
             num_qTwo=int(num_q)
             question_txt = open(uniqueFile, "w")
             question_txt.write("0")
             question_txt.close()
-
-        # return[] we aren't really returning anything
+            # returns follow up action asking user if they want to email the conversation log
+            return [FollowupAction("action_dummy")]
         
 
 class ActionMakeFile(Action):
@@ -442,6 +443,18 @@ class ActionActivatePart8(Action):
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         print("Activating part 8 of the conversation")
         return[]
+
+class ActionDummmy(Action):
+
+    def name(self) -> Text:
+        return "action_dummy"
+
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        print("HELLO this is a dummy action that restarts the conversation.")
+        return[Restarted()]
+
 
 # class ActionTest(Action):
 #
