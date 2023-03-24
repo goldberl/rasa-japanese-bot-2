@@ -64,11 +64,11 @@ class ActionDefaultAskAffirmation(Action):
        elif "Please type the name of the person you want to email." in lastBotMessage:
            dispatcher.utter_message('The person you want to email is ' + lastOutput)
            SlotSet("recipient", lastOutput)
-           return [FollowupAction("after_handle_did_not_understand_answer")]
+           return [FollowupAction("collect_email_info")]
        elif "Please enter the email address of the person you want to email." in lastBotMessage:
            dispatcher.utter_message('The email address is ' + lastOutput)
            SlotSet("email", lastOutput)
-           return [FollowupAction("after_handle_did_not_understand_answer")]
+           return [FollowupAction("collect_email_info")]
        else:
            dispatcher.utter_message(text="すみません、わかりません。 Sorry, I don't quite understand (,,>﹏<,,).", image = "https://media.tenor.com/-caxkmc867EAAAAC/mochi-cat.gif")
            return [FollowupAction("after_handle_did_not_understand_answer")]
@@ -189,15 +189,14 @@ class CollectEmailInfo(Action):
        # Gets the user's last intent by extracting it from tracker dict
        lastUserIntentDictionary = tracker.latest_message['intent']
        lastUserIntent = list(lastUserIntentDictionary.values())[0]
+       print("Last user intent when running CollectEmailInfo: " + str(lastUserIntent))
 
        if "inform_recipient" in lastUserIntent:
            emailFile = "emailInfo/emailInfo_" + tracker.sender_id + ".txt"
            email_txt = open(emailFile,"a")
            email_txt.write(conversation_log_user +"\n")
-            
-
-       emailAd = ''
-       if "inform_email" in lastUserIntent:
+           print("recipient recorded in text file")   
+       elif "inform_email" in lastUserIntent:
            print("intent is inform email")
            emailFile = "emailInfo/emailInfo_" + tracker.sender_id + ".txt"
            email_txt = open(emailFile,"a")
@@ -205,7 +204,10 @@ class CollectEmailInfo(Action):
            for word in words:
                if "@" in word:
                    email_txt.write(word + "\n")
+           print("email recorded in text file")
+
        email_txt.close()
+       
 
 
 # Creating new class to send emails.
@@ -347,7 +349,7 @@ class ActionCheckNumQuestions(Action):
         else:
             print("User asked " + str(num_q))
             dispatcher.utter_message(text="You asked 8 questions. You're finished!")
-            dispatcher.utter_message(text="Send an email?")
+            dispatcher.utter_message(text="Do you want to send an email of the conversation log to anyone? Please type 'yes' or 'no' in English.")
             num_qTwo=int(num_q)
             question_txt = open(uniqueFile, "w")
             question_txt.write("0")

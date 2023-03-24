@@ -71,11 +71,11 @@ stories:
   - intent: inform_recipient
   - action: collect_email_info
   - action: utter_askemail
-  - intent: inform_email
-  - action: collect_email_info
-  - action: action_email
-  - action: utter_thanks_for_talking
-  - action: utter_goodbye
+#  - intent: inform_email
+#  - action: collect_email_info
+#  - action: action_email
+#  - action: utter_thanks_for_talking
+#  - action: utter_goodbye
 
 - story: user DOES NOT want to send email
   steps:

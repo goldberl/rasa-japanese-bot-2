@@ -168,6 +168,15 @@ rules:
   - action: utter_askme
   - action: log_conversation_bot
 
+# send email
+- rule: send an email after address is given
+  steps:
+  - intent: inform_email
+  - action: collect_email_info
+  - action: action_email
+  - action: utter_thanks_for_talking
+  - action: utter_goodbye
+
 # Ask about email
 # - rule: ask about email (start email stories)
 #  steps:
