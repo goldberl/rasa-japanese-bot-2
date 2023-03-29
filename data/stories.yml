@@ -5,10 +5,7 @@ stories:
 - story: test story
   steps:
   - intent: greet
-  - action: log_conversation_user
   - action: utter_hello
-  - action: log_conversation_bot
-  - action: utter_greet
   - action: log_conversation_bot
   - action: action_make_file #This line allows the question counter to work.
   - action: utter_ask_jap_level

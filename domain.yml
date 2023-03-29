@@ -2,12 +2,12 @@ version: '3.1'
 intents:
 - bot_challenge
 - goodbye
-- greet
 - inform_idk
 - inform_yes
 - inform_no
 - inform_email
 - inform_recipient
+- greet
 
 ##################################################################################################
 - inform_jap_level
@@ -25,12 +25,10 @@ intents:
 responses:
   utter_hello:
   - text: こんにちは! 
-  utter_greet:
-  - text: はじめまして、 わたしはにほんごのチャットボットです。(。・ω・)ノ
-    image: https://media.tenor.com/ule8gL4rTIgAAAAC/peach-cat-mochi-mochi.gif
+    image: https://media.tenor.com/yCFHzEvKa9MAAAAi/hello.gif
   utter_goodbye:
   - text: ではまたね。(・ω・)ノ
-    image: https://media.tenor.com/inhg61kTkrwAAAAi/cute.gif
+    image: https://media.tenor.com/CJk3mN3Em1EAAAAi/goodbye-goodbye-see-you.gif
   utter_iamabot:
   - text: ラサのボートです.
     image: https://media.tenor.com/arlZrN0YovkAAAAC/robot-smile.gif
@@ -69,37 +67,50 @@ responses:
 ##############################################################################################
   utter_respond_jap_level:
   - text: いいね。日本語がむずかしですよ。時に外国人にとって、日本語の文法と漢字はかんたんではありません。しかし、日本語をれんしゅうしたら、上手になりますよ！
+    image: https://media.tenor.com/DGCurvDqB0AAAAAi/evacomics-matcha.gif
   utter_respond_education:
   - text: おもしろい、{education}で勉強しましたね。日本語の勉強をがんばりましょう！
+    image: https://media.tenor.com/bSo9zUn8qKwAAAAi/japanese-cute.gif
   utter_respond_name_english:
   - text: おなまえは{name}さんですか？はじめまして。ラサともうします。
+    image: https://media.tenor.com/bDt3ZQhd7C4AAAAi/akirambow-smile-person.gif
   utter_respond_hometown:
   - text: そうなんですか。{hometown}からいらっしゃいますね。いつか{hometown}に旅行したいと思います。
+    image: https://media.tenor.com/0u5Uw8RKWqsAAAAi/appintheair-earth.gif
   utter_respond_been_Japan:
   - text: 富士山に行ったりおいしい料理を食べたりできるので、日本はすごいですね。
+    image: https://media.tenor.com/yux4VXCltpEAAAAi/snowed-mountain-permanent-snow.gif
   utter_respond_preference:
   - text: わかりました。{preference}のほうがお好きですか。私はスポーツのほが好きです。日本で「やきゅう」はとても人気があります。
+    image: https://media.tenor.com/8jRsDiMkSMkAAAAi/bugcat-capoo.gif
   utter_respond_food:
   - text: 私も{food}をいただきたいと思います。東京においしい{food}がありますね。
+    image: https://media.tenor.com/aQgDfDwIOIoAAAAi/line.gif
   utter_respond_onsen:
   - text: そうなんでか。おんせんでリラックスできるので、好きです。
+    image: https://media.tenor.com/KfuebrHv5jsAAAAi/%E6%B8%A9%E6%B3%89-%E3%81%86%E3%81%95%E3%81%8E%E3%82%85%E3%83%BC%E3%82%93.gif
 ##############################################################################################
   utter_question/ask_live:
   - text: 北海度からまいります。
+    image: https://media.tenor.com/OrNx79uo8k4AAAAi/gaudi-nodding.gif
   utter_question/ask_occupation:
   - text: 医者として働いております。
+    image: https://media.tenor.com/96XrE_mpMQEAAAAi/nurse-doctor%27s-appointment.gif
   utter_question/ask_family:
   - text: お母さんとお父さんは京都に住んでおります。兄は東京にいます。
   utter_question/ask_kids:
   - text: 子供が一人おります。むすめは21歳でございまず。
   utter_question/ask_America_activity:
   - text: 7月4日に花火に見にまいりました。
+    image: https://media.tenor.com/EZy6Jg-Mvk0AAAAi/twistopenux-happy-new-year2021.gif
   utter_question/ask_America_reason:
   - text: ホワイトハウスを見たりアメリカの文化について習ったりしたいでございますから。
+    image: https://media.tenor.com/x7VrAOcZtFoAAAAi/eagle-flap.gif
   utter_question/ask_America_where:
   - text: ワシントンDCとテネシーにまいりました。
   utter_question/ask_food:
   - text: ホットドッグとハンバーガーをいただきました。
+    image: https://media.tenor.com/UkyHTVt25gQAAAAi/chilli-dog-chilli-dogs.gif
 
 entities:
 - name
