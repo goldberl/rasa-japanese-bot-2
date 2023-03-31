@@ -75,7 +75,7 @@ responses:
   - text: おなまえは{name}さんですか？はじめまして。ラサともうします。
     image: https://media.tenor.com/bDt3ZQhd7C4AAAAi/akirambow-smile-person.gif
   utter_respond_hometown:
-  - text: そうなんですか。{hometown}からいらっしゃいますね。いつか{hometown}に旅行したいと思います。
+  - text: そうなんですか。いつかそこに旅行したいと思います。
     image: https://media.tenor.com/0u5Uw8RKWqsAAAAi/appintheair-earth.gif
   utter_respond_been_Japan:
   - text: 富士山に行ったりおいしい料理を食べたりできるので、日本はすごいですね。
