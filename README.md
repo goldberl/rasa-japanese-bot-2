@@ -1,6 +1,17 @@
 ## Japanese Chatbot for Language Learners using [Rasa](https://rasa.com/)
 
-#### This is a simple chatbot aimed to help beginner Japanese language learners practice a basic conversation. This bot will ask the user about themselves and also prompt them to ask questions back.
+#### This is a simple chatbot aimed to help beginner Japanese language learners practice a basic conversation using keigo.
+
+##### When the bot asks you to ask it questions, please ask the following:
+1. Where do you live?
+2. What is your job?
+3. Where does your family live?
+4. Do you have kids?
+5. What did you do in America?
+6. Why did you come to America?
+7. Where did you go in America?
+8. What did you eat?
+
 
 #### Installing Rasa: Follow these instructions to download [Rasa](https://rasa.com/) for:
 * [Windows](https://learning.rasa.com/installation/)
