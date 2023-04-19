@@ -218,6 +218,8 @@ nlu:
    - [ロシア](hometown)です。
 - intent: inform_Japan_trip
   examples: |
+   - はい、あります。
+   - いいえ、ありません。
    - あります。
    - ありません。
    - 日本に行ったことがあります。

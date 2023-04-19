@@ -57,19 +57,19 @@ responses:
   utter_ask_been_Japan:
   - text: 日本にいらっしゃったことがありますか？
   utter_ask_preference:
-  - text: 日本のスポーツとかぶきと、どちらのほうがおごらんになりたいですか。
+  - text: 日本のスポーツとかぶきと、どちらのほうがごらんになりたいですか。
   utter_ask_food:
   - text: どんな日本の料理をめしあがりたいですか？
   utter_ask_onsen:
-  - text: 日本のおんせんをどう思いまか？
+  - text: 日本のおんせんをどう思いますか？
   utter_askme:
   - text: 私にしつもんを聞いてください。Please ask the questions that are listed on the webpage and try to use keigo.
 ##############################################################################################
   utter_respond_jap_level:
-  - text: いいね。日本語がむずかしですよ。時に外国人にとって、日本語の文法と漢字はかんたんではありません。しかし、日本語をれんしゅうしたら、上手になりますよ！
+  - text: いいね。日本語がむずかしいですよ。外国人にとって、日本語の文法と漢字はかんたんではありません。でも、日本語をれんしゅうしたら、上手になりますよ。れんしゅうしましょう！
     image: https://media.tenor.com/DGCurvDqB0AAAAAi/evacomics-matcha.gif
   utter_respond_education:
-  - text: おもしろい、{education}で勉強しましたね。日本語の勉強をがんばりましょう！
+  - text: そごいですね。{education}で勉強しましたね。日本語の勉強をがんばります！
     image: https://media.tenor.com/bSo9zUn8qKwAAAAi/japanese-cute.gif
   utter_respond_name_english:
   - text: おなまえは{name}さんですか？はじめまして。ラサともうします。
@@ -87,11 +87,11 @@ responses:
   - text: 私も{food}をいただきたいと思います。東京においしい{food}がありますね。
     image: https://media.tenor.com/aQgDfDwIOIoAAAAi/line.gif
   utter_respond_onsen:
-  - text: そうなんでか。おんせんでリラックスできるので、好きです。
+  - text: そうなんですか。おんせんでリラックスできるので、好きです。
     image: https://media.tenor.com/KfuebrHv5jsAAAAi/%E6%B8%A9%E6%B3%89-%E3%81%86%E3%81%95%E3%81%8E%E3%82%85%E3%83%BC%E3%82%93.gif
 ##############################################################################################
   utter_question/ask_live:
-  - text: 北海度からまいります。
+  - text: 北海道からまいりました。
     image: https://media.tenor.com/OrNx79uo8k4AAAAi/gaudi-nodding.gif
   utter_question/ask_occupation:
   - text: 医者として働いております。
