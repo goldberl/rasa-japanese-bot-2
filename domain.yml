@@ -30,7 +30,7 @@ responses:
   - text: ではまたね。(・ω・)ノ
     image: https://media.tenor.com/CJk3mN3Em1EAAAAi/goodbye-goodbye-see-you.gif
   utter_iamabot:
-  - text: ラサのボートです.
+  - text: Chatbotのラサです.
     image: https://media.tenor.com/arlZrN0YovkAAAAC/robot-smile.gif
   utter_ask_name:
   - text: おなまえは？
@@ -63,53 +63,53 @@ responses:
   utter_ask_onsen:
   - text: 日本のおんせんをどう思いますか？
   utter_askme:
-  - text: 私にしつもんを聞いてください。Please ask the questions that are listed on the webpage and try to use keigo.
+  - text: 私にも聞いてください。Please ask the questions that are listed on the webpage and try to use keigo.
 ##############################################################################################
   utter_respond_jap_level:
-  - text: いいね。日本語がむずかしいですよ。外国人にとって、日本語の文法と漢字はかんたんではありません。でも、日本語をれんしゅうしたら、上手になりますよ。れんしゅうしましょう！
+  - text: いいです。日本語がむずかしいですね。いっしょにれんしゅうしましょう！
     image: https://media.tenor.com/DGCurvDqB0AAAAAi/evacomics-matcha.gif
   utter_respond_education:
-  - text: そごいですね。{education}で勉強しましたね。日本語の勉強をがんばります！
+  - text: すごいですね。{education}で勉強したんですね。日本語の勉強をがんばりましたね！
     image: https://media.tenor.com/bSo9zUn8qKwAAAAi/japanese-cute.gif
   utter_respond_name_english:
   - text: おなまえは{name}さんですか？はじめまして。ラサともうします。
     image: https://media.tenor.com/bDt3ZQhd7C4AAAAi/akirambow-smile-person.gif
   utter_respond_hometown:
-  - text: そうなんですか。いつかそこに旅行したいと思います。
+  - text: そうなんですか。いつか行きたいと思います。
     image: https://media.tenor.com/0u5Uw8RKWqsAAAAi/appintheair-earth.gif
   utter_respond_been_Japan:
-  - text: 富士山に行ったりおいしい料理を食べたりできるので、日本はすごいですね。
+  - text: 富士山に行ったりおいしい料理を食べたりできるので、日本はいいですね。
     image: https://media.tenor.com/yux4VXCltpEAAAAi/snowed-mountain-permanent-snow.gif
   utter_respond_preference:
-  - text: わかりました。{preference}のほうがお好きですか。私はスポーツのほが好きです。日本で「やきゅう」はとても人気があります。
+  - text: わかりました。{preference}のほうがお好きですか。私はスポーツのほうが好きです。日本で「やきゅう」はとても人気があります。
     image: https://media.tenor.com/8jRsDiMkSMkAAAAi/bugcat-capoo.gif
   utter_respond_food:
-  - text: 私も{food}をいただきたいと思います。東京においしい{food}がありますね。
+  - text: 私も{food}を食べたいです。東京においしい{food}がありますね。
     image: https://media.tenor.com/aQgDfDwIOIoAAAAi/line.gif
   utter_respond_onsen:
-  - text: そうなんですか。おんせんでリラックスできるので、好きです。
+  - text: そうなんですか。おんせんはリラックスできるので、いいですね。
     image: https://media.tenor.com/KfuebrHv5jsAAAAi/%E6%B8%A9%E6%B3%89-%E3%81%86%E3%81%95%E3%81%8E%E3%82%85%E3%83%BC%E3%82%93.gif
 ##############################################################################################
   utter_question/ask_live:
-  - text: 北海道からまいりました。
+  - text: 北海道からきました。
     image: https://media.tenor.com/OrNx79uo8k4AAAAi/gaudi-nodding.gif
   utter_question/ask_occupation:
-  - text: 医者として働いております。
+  - text: 医者として働いています。
     image: https://media.tenor.com/96XrE_mpMQEAAAAi/nurse-doctor%27s-appointment.gif
   utter_question/ask_family:
-  - text: お母さんとお父さんは京都に住んでおります。兄は東京にいます。
+  - text: お母さんとお父さんは京都に住んでいます。兄は東京にいます。
   utter_question/ask_kids:
-  - text: 子供が一人おります。むすめは21歳でございまず。
+  - text: 子供が一人います。むすめは21歳です。
   utter_question/ask_America_activity:
-  - text: 7月4日に花火に見にまいりました。
+  - text: 7月4日に花火に見に行きました。
     image: https://media.tenor.com/EZy6Jg-Mvk0AAAAi/twistopenux-happy-new-year2021.gif
   utter_question/ask_America_reason:
-  - text: ホワイトハウスを見たりアメリカの文化について習ったりしたいでございますから。
+  - text: ホワイトハウスを見たりアメリカの文化について習ったりしたいですから。
     image: https://media.tenor.com/x7VrAOcZtFoAAAAi/eagle-flap.gif
   utter_question/ask_America_where:
-  - text: ワシントンDCとテネシーにまいりました。
+  - text: ワシントンDCとテネシーにいきました。
   utter_question/ask_food:
-  - text: ホットドッグとハンバーガーをいただきました。
+  - text: ホットドッグとハンバーガーを食べました。おいしかったです！
     image: https://media.tenor.com/UkyHTVt25gQAAAAi/chilli-dog-chilli-dogs.gif
 
 entities:
